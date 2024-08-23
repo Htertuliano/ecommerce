@@ -1,0 +1,18 @@
+<div class="container-fluid" style="background-color:antiquewhite">
+    <div class="row">
+        <div class="col-md-2 mt-3" *ngFor="let item of data?.products">
+            <div class="card mt-2" >
+                <div class="card-body">
+                    <div class="card-img-actions">
+                        <img src="{{item.thumbnail}}" alt="" class="car-img img-fluid">
+                    </div>
+                </div>
+                <div class="car-body bg-light text-center">
+                    <div><h6>{{item.title}}</h6></div>
+                    <h3 class="mb-0 font-weight-semibold">${{item.price}}</h3>
+                    <button routerLink="/product-detail/{{item.id}}">View Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>

@@ -1,0 +1,18 @@
+
+.container{
+    margin-top: 100px;
+}
+img{
+    width: 100%;
+    height: 400px;
+    object-fit: content;
+}
+.product-detail{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.detail{
+    float: right;
+    margin-right: 500px;
+    margin-top: -250px;
+}

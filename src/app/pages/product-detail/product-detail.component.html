@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <h4 style="color: antiquewhite; margin-left: 10px;" >EShop</h4>
+        <button class="btn btn-warning" routerLink="/">Back</button>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row product-detail">
+        <div class="col-sm-3">
+            <img src="{{productdata?.images[0]}}" alt="image of the product described" class="product-img">
+            <div>
+                <button class="btn btn-primary text-center">Add to cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-sm-3 detail">
+    <div>
+        <h1 style="color: rgb(106, 75, 37);">{{productdata.title}}</h1>
+        <p style="color: bisque;">Special Price</p>
+        <h3>${{productdata.price}}</h3>
+        <strong>Category:&nbsp;{{productdata.category}}</strong><br>
+        <strong>Description</strong><br>
+        <p>{{productdata.description}}</p><br>
+        <p style="color: green;"> Discount: {{productdata.discountPercentage}}%</p>
+        <strong>Stock left: 10</strong>
+
+    </div>

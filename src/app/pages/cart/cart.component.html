@@ -1,0 +1,45 @@
+<ng-container *ngIf="showproduct.length !=0">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-9">
+    <h3>Cart Items</h3>
+        <table class="table table-borderless mt-3">
+            <thead class="thead-dark">
+              <tr >
+                <th scope="col">Image </th>
+                <th scope="col">Brand</th>
+                <th scope="col">Category</th>
+                <th scope="col">Price</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of showproduct">
+                <td><img style="width: 120px;" src="{{item.images[0]}}">  </td>
+                <td>{{item.title}}</td>
+                <td>{{item.category}}</td>
+                <td>${{item.price}}</td>
+                <td><button (click)="deleteitem(item)" class="btn btn-danger">Delete</button>  </td>
+              </tr>
+             
+            </tbody>
+          </table>
+         </div>
+         <!-- total section-->
+
+        </div>
+      </div>
+</ng-container>
+
+<!--Empty cart-->
+
+<ng-container *ngIf="showproduct.length ==0">
+    <div class="card">
+        <div class="center">
+          <img style="width: 250px;" src="https://media.istockphoto.com/id/1266144552/vector/emoticon-with-sorry-sign.jpg?s=612x612&w=0&k=20&c=SxPesZy6zIYB2lbY3l8cQgpXaQdeBN_GcHrsOlsc4J8=">
+            <h4>Your Cart is Empty</h4>
+            <h6>Please Add Item</h6>
+            <button routerLink="/" class="btn btn-dark">Shop Now </button>
+        </div>
+    </div>
+</ng-container>
